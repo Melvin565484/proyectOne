@@ -25,8 +25,8 @@
                             <td style="display: none;">{{$producto->id}}</td>
                             <td>{{$producto->nombre}}</td>
                             <td>{{$producto->descripcion}}</td>
-                            <td class="border px-14 py-1">
-                                <img src="/imagen/{{$producto->imagen}}" width="50%">
+                            <td class="border px-10 py-1">
+                                <img src="/imagen/{{$producto->imagen}}" width="100%">
                             </td class="border px-4 py-2">
                                 </div>
                             <td>
