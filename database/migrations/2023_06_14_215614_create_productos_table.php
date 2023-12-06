@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion');
+            $table->integer('cantidad');
+            $table->float('precio');
             $table->string('imagen');
+            $table->string('categoria');
             $table->timestamps();
         });
     }

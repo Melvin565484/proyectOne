@@ -4,4 +4,293 @@
 
 [x-cloak] {
     display: none;
+
 }
+
+/*Boton crear*/
+.boton {
+    background-color: #0a894e;
+}
+/*Boton Editar */
+.boton1 {
+    background-color: #ce7221;
+}
+
+
+.mi-tabla {
+    width: 100%; /* Establece el ancho de la tabla al 100% del contenedor */
+    margin: 0 auto; /* Centra la tabla dentro del contenedor */
+    border-collapse: collapse; /* Fusiona los bordes de las celdas */
+  }
+  
+  .mi-tabla th, .mi-tabla td {
+    border: 1px solid #0a6789; /* Añade un borde a las celdas */
+    padding: 8px; /* Espaciado interno en las celdas */
+    text-align: center; /* Alineación del texto al centro */
+  }
+  
+  .mi-tabla th {
+    background-color: #0a5f89; /* Fondo del encabezado */
+    color: #ffffff; /* Color del texto en el encabezado */
+  }
+  
+  .mi-tabla tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo de filas pares */
+  }
+  
+  
+  body {
+    background-color: #d02727; /* Reemplaza #ffffff con el color que desees */
+  }
+  
+
+
+
+  /* Estilos CSS */
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+  }
+
+  .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      width: 100%; /* Asegura que la cuadrícula ocupe todo el ancho disponible */
+      max-width: 1200px; 
+      margin: 100px; /* Centra la cuadrícula */
+  }
+
+/* styles.css */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ... logo ... */
+@keyframes cambioColor {
+  0% { background-color: #ff0000; }
+  50% { background-color: #00ff00; }
+  100% { background-color: #ff0000; }
+}
+
+.logo {
+  width: 200px; /* Ajusta el tamaño según tus necesidades */
+  height: 100px;
+  background-color: #ff0000; /* Color inicial */
+  animation: cambioColor 3s infinite;
+}
+
+ /* IMAGEN SALTARINA */
+ @keyframes saltar {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+.contenedor {
+  position: relative;
+  height: 300px; /* Ajusta según tus necesidades */
+}
+
+.imagen-saltarina {
+  width: 100px; /* Ajusta según tus necesidades */
+  height: auto;
+  position: absolute;
+  animation: saltar 2s infinite; /* Ajusta la duración según tus necesidades */
+}
+
+/* Agrega una clase específica para el pie de página */
+.footer-styles {
+  background-color: #222;
+  padding: 20px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer-styles section {
+  margin-bottom: 20px;
+}
+
+.footer-styles section h2 {
+  color: #fff;
+  font-size: 1.2em;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-styles section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-styles li {
+  margin: 5px 0;
+}
+
+.footer-styles section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-styles input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.footer-styles .social-icons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer-styles .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.footer-styles #phone-number {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.footer-styles #newsletter-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+ /* Estilos CSS */
+ .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay p {
+  color: white;
+  font-size: 16px;
+}
+
+
+/*catalogo estilos... */
+
+
+
+.container {
+    background-color: white; /* Fondo blanco para el contenedor */
+    padding: 100px; /* Añadir espacio interno para mejorar la apariencia */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: white; /* Fondo blanco para las tarjetas */
+    padding: 20px; /* Añadir espacio interno para mejorar la apariencia */
+}
+
+.product:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+ /* Otros estilos del navbar */
+
+.navbar {
+  position: relative;
+  /* Otros estilos del navbar */
+}
+
+.cart-icon {
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+

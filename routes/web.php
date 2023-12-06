@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\CatalogoController;
+use App\Http\Controllers\CarritoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ use App\Http\Controllers\ProductoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::middleware([
@@ -26,4 +28,35 @@ Route::middleware([
     Route::get('/dashboard', function(){
         return view('dashboard');
     })->name('dashboard');
+
+    Route::resource('users', \App\Http\Controllers\UsersController::class);
 });
+
+Route::get('/products', [ProductController::class, 'index']);
+
+
+
+Route::get('/catalogo', [CatalogoController::class, 'Catalogo'])->name('catalogo');
+
+
+Route::get('/productos', [ProductoController::class, 'index'])->name('productos.index');
+
+
+
+Route::get('/comprar', [ProductoController::class, 'mostrarComprar'])->name('comprar.mostrar');
+
+
+
+
+// Rutas para el carrito
+// routes/web.php
+
+Route::get('/cart', 'CartController@showCart');
+Route::post('/cart/add', 'CartController@addToCart');
+Route::post('/cart/remove', 'CartController@removeFromCart');
+
+// routes/web.php
+
+Route::get('/cart', 'CartController@showCart');
+
+

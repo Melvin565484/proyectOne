@@ -20,7 +20,7 @@
 
             <div class="flex justify-end mt-4">
                 <x-button class="ml-4">
-                    {{ __('Confirm') }}
+                    {{ __('Confirmar') }}
                 </x-button>
             </div>
         </form>

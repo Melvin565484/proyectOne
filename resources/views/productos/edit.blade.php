@@ -12,14 +12,28 @@
             @csrf
             @method('PUT')
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
-                <div class="grid grid-cols-1">
-                    <label class="uppercase md:text-sm text-xs text-gray-100 text-light font-semibold">Nombre:</label>
-                    <input name="nombre" value="{{ $producto->nombre }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent hover:bg-gray-300" type="text" required/>
-                </div>
-                <div class="grid grid-cols-1">
-                    <label class="uppercase md:text-sm text-xs text-gray-100 text-light font-semibold">Descripción:</label>
-                    <input name="descripcion" value="{{ $producto->descripcion }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent hover:bg-gray-300" type="text" required/>
-                </div>
+                    <div class="grid grid-cols-1">
+                        <label class="uppercase md:text-sm text-xs text-gray-100 text-gray font-semibold">Nombre:</label>
+                        <input name="nombre" value="{{ $producto->nombre }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent hover:bg-gray-300" type="text" required/>
+                    </div>
+                    <div class="grid grid-cols-2 ">
+                    <div>
+                    <label class="uppercase md:text-sm text-xs text-gray-100 text-light font-semibold">Cantidad:</label>
+                    <input name="cantidad" value="{{ $producto->cantidad }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent hover:bg-gray-300 w-3/4 h-12" type="number" required/>
+                    </div>
+                    <div>
+                     <label class="uppercase md:text-sm text-xs text-gray-100 text-light font-semibold">Precio:</label>
+                     <input name="precio" value="{{ $producto->precio }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent hover:bg-gray-300 w-3/4 h-12" type="number" required/>
+                     </div>
+                    </div>
+                    <div class="grid grid-cols-1">
+                        <label class="uppercase md:text-sm text-xs text-gray-100 text-light font-semibold">Categoria:</label>
+                        <input name="categoria" value="{{ $producto->categoria }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent hover:bg-gray-300" type="text" required/>
+                    </div>
+                    <div class="grid grid-cols-1">
+                        <label class="uppercase md:text-sm text-xs text-gray-100 text-light font-semibold">Descripción:</label>
+                        <input name="descripcion" value="{{ $producto->descripcion }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent hover:bg-gray-300 w-3/4 h-20" type="text" required/>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 mt-5 mx-7">
